@@ -1,0 +1,23 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+.All{
+    display: flex;
+}
+.steps{
+    background-image: url(challagePic/bg-pic.svg);
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+    padding-left: 60px;
+    color: white;
+}
+.step{
+    display: flex;
+}
+.step h2{
+    font-size: 20px;
+}
+ 
