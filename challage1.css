@@ -17,7 +17,15 @@ body{
 .step{
     display: flex;
 }
-.step h2{
-    font-size: 20px;
+.step h4{
+    font-size: 15px;
+}
+.step h3{
+    border-radius: 2px solid ;
+    width: 20px;
+    background-color: black;
+}
+.Info{
+    margin-left: 20px;
 }
  
