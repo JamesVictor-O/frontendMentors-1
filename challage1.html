@@ -17,7 +17,7 @@
                   <h3>1</h3>
                </div>
                <div class="step1 Info">
-                    <h4>STEP <br><span>YOUR INFO</span></h4>
+                    <h4>STEP 1<br><span>YOUR INFO</span></h4>
                </div>
             </div>
 
@@ -55,27 +55,78 @@
         <!-- section for informations -->
 
         <section class="detalis">
-            <div class="info">
-                <h2>Personal Info</h2>
-                <p>please provide your name, email address and Phone number</p>
+            <!-- personal inf -->
+            <div class="personal hidden">
+                <div class="info">
+                    <h2>Personal Info <br><span>please provide your name, email address and Phone number</span></h2>
+                </div>
+                <!-- for name -->
+                <div class="name inp">
+                    <label>Name</label><br>
+                    <input type="text" placeholder="e.g James Victor" >
+                </div>
+                <!-- for Email -->
+                <div class="email inp">
+                    <label>Email</label><br>
+                    <input type="email" placeholder="e.g. victorjames408@gmail.com">
+                </div>
+                <!-- for Phone number -->
+                <div class="number inp">
+                    <label>Phone number</label><br>
+                    <input type="text" placeholder="e.g. +1234567">
+                </div>
             </div>
-            <!-- for name -->
-            <div class="name">
-                <label>Name</label><br>
-                <input type="text" >
+            <!-- plans -->
+            <div class="plans">
+                <div class="info">
+                    <h2>Select your plan <br><span>You have the options of monthly or yearly billing</span></h2>
+                </div>
+
+                <!-- plans options -->
+                <div class="plans_options">
+
+                    <div class="first">
+                        <div class="img1">
+                            <img>
+                        </div>
+                        <div class="first-d">
+                            <h2>Arcade <span>$9/mo</span></h2>
+                        </div>
+                    </div>
+
+                    <div class="second">
+                        <div class="img2">
+                            <img>
+                        </div>
+                        <div class="second-d">
+                            <h2>Advanced <span>$12/mo</span></h2>
+                        </div>
+                    </div>
+
+                    <div class="third">
+                        <div class="img3">
+                            <img>
+                        </div>
+                        <div class="third-d">
+                            <h2>Pro <span>$15/mo</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub">
+                    <input type="range">
+                </div>
             </div>
-            <!-- for Email -->
-            <div class="name">
-                <label>Email</label><br>
-                <input type="email" >
-            </div>
-            <!-- for Phone number -->
-            <div class="name">
-                <label>Phone number</label><br>
-                <input type="text" >
+
+            <!-- button section -->
+            <div class="Buttons">
+               <div class="next btn">
+                  <button>back</button>
+               </div>
+               <div class="back btn">
+                <button>next</button>
+             </div>
             </div>
         </section>
-
     </div>
 </body>
 </html>
