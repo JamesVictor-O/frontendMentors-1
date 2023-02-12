@@ -50,6 +50,7 @@ body{
     width: 60%;
     margin-left: 60px;
     position: relative;
+    margin-top: 20px;
 }
 .info h2 span{
     font-weight: 50;
@@ -91,4 +92,53 @@ body{
 
 .hidden{
    display: none;
+}
+
+/* plans */
+.plans_options{
+    display: flex;
+    flex-direction: row;
+}
+.plans_options .first{
+    border: 1px solid black;
+    width: 20%;
+    padding: 12px;
+    border-radius: 10px;
+}
+.plans_options .second{
+    border: 1px solid black;
+    margin-left: 20px;
+    width: 20%;
+    border-radius: 10px;
+    padding: 12px;
+}
+.plans_options .third{
+    border: 1px solid black;
+    margin-left: 20px;
+    width: 20%;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+/* for buttons */
+.sub{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    width: 60%;
+    margin-left: 40px;
+}
+.Inputs{
+    background: black;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.Inputs input{
+    background-color: black;
+}
+.plans_options h2 span{
+    font-weight: 50;
+    font-size: 15px;
 }
