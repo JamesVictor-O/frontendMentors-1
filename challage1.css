@@ -39,10 +39,12 @@ body{
     width: 20px;
     align-content: center;
     align-items: center;
+    padding-left: 10px;
 }
 .Info{
     margin-left: 20px;
 }
+
  
 /* detailed section */
 
@@ -120,6 +122,43 @@ body{
     padding: 12px;
 }
 
+/* summary */
+.summary{
+    height: 200px;
+    background-color: red;
+    position: relative;
+}
+.summary-menu{
+    background-color: rgb(250, 217, 246)
+    padding: 0px;
+    padding-bottom: 0;
+    height: 100px;
+}
+.services{
+    background-color: whi;
+}
+.subscrib{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.services1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.services2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /* for buttons */
 .sub{
     display: flex;
@@ -141,4 +180,40 @@ body{
 .plans_options h2 span{
     font-weight: 50;
     font-size: 15px;
+}
+
+/* pick add-ons */
+.subs{
+    border: 1px solid rgb(48, 51, 249);
+    margin-bottom: 10px;
+}
+.online{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    padding: 20px;
+    padding-top: 0;
+}  
+.online-dis{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    
+}
+.online-dis p{
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.online-dis p span{
+    font-size: 13px;
+}
+.online-dis input{
+    margin-top: 20px;
+}
+.onth{
+    margin-top: 25px;
+    color: blue;
 }
