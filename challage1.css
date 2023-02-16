@@ -47,7 +47,14 @@ body{
 
  
 /* detailed section */
-
+.page{
+    position: absolute;
+    width: 100%;
+}
+.clicked{
+    border: 2px solid black;
+    background: rgb(201, 195, 195);
+}
 .detalis{
     width: 60%;
     margin-left: 60px;

@@ -3,18 +3,14 @@
 let Name=document.querySelector(".name");
 let email=document.querySelector(".email");
 let phoneNumber=document.querySelector(".phoneNumber");
- 
-let stepNumber=0;
 
 
-
-// fo
-
+let plans=document.querySelectorAll(".show")
+let indexNum=[1];
 
 // for buttons
 let nextButton=document.querySelector(".next");
 let backButton=document.querySelector(".back");
-
 
 // for error massage
 function error(element,massage){
@@ -38,16 +34,18 @@ function correct(element,massage){
       passage.textContent= massage;
 }
 
+// to check if the personal details option is correctly field
  function checkPersonal(){
     // for name
     let nameValue=Name.value;
-    if(nameValue ==""){
-       error(Name,"name can not be blank")
-    }else if(nameValue.trim().length < 5 || nameValue.trim().length > 15 ){
-        error(Name,"min of 5 and max of 15")
-    }else{
-        correct(Name)
-    }
+    nameValue =="" ? error(Name,"name can not be blank") : nameValue.trim().length < 5 || nameValue.trim().length > 15 ?  error(Name,"min of 5 and max of 15"): correct(Name);
+    // if(nameValue ==""){
+    //    error(Name,"name can not be blank")
+    // }else if(nameValue.trim().length < 5 || nameValue.trim().length > 15 ){
+    //     error(Name,"min of 5 and max of 15")
+    // }else{
+    //     correct(Name)
+    // }
 
     // for email
     let emailValue=email.value;
@@ -70,35 +68,28 @@ function correct(element,massage){
     }
 }
 
-let Steps=document.querySelectorAll(".one");
-// for showing progress in the steps menu
-function showProgress(){
-    let Steps=document.querySelectorAll(".one");
-    let step=Steps[stepNumber].parentElement;
-    step.classList.add("ground")
-     
-    let Allpages=document.querySelectorAll(".page");
-    let page=Allpages[stepNumber];
-    page.classList.remove("hidden")
+// when you click on the plan options
+plans.forEach((items,index)=>{
+    items.addEventListener("click", ()=>{
+     indexNum.pop()
+     indexNum.push(index)
+    //  if(indexNum.length <= 1){
 
-}
-let Allpages=document.querySelectorAll(".page");
-    let page=Allpages[stepNumber]
-console.log(page=Allpages[stepNumber])
+    //     // items.classList.contains("clicked") ? items.classList.remove("clicked") : items.classList.add("clicked");
+    
+      
+
+    })
+})
+
+console.log(plans)
 
 
 nextButton.addEventListener("click", ()=>{
     checkPersonal()
     showProgress()
-    
-    // if(stepNumber !== 3){
-    //     stepNumber++;
-    // }
-    stepNumber++;
-    console.log(stepNumber)
 })
 backButton.addEventListener("click",()=>{
     showProgress()
-    stepNumber--;
-    console.log(stepNumber)
+    
 })
