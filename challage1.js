@@ -8,6 +8,46 @@ let phoneNumber=document.querySelector(".phoneNumber");
 let plans=document.querySelectorAll(".show")
 let indexNum=[1];
 
+
+// for the pages to be able to slide
+let currentslide=0;
+
+let sliders=document.querySelectorAll(".page")
+let maxslid=sliders.length;
+
+function slider(slid){
+    sliders.forEach((slide, i)=>{
+        slide.style.transform=`translateX(${100 * (i-slid)}%)`;
+     })
+}
+
+slider(0)
+
+
+function slideFoward(){
+    currentslide === maxslid-1 ? currentslide=0 : currentslide++;
+    slider(currentslide)
+    console.log(currentslide)
+}
+
+function slideBackward(){
+    currentslide === 0 ? currentslide=maxslid -1 : currentslide--;
+    console.log(`this is the max${maxslid}`)
+    
+    console.log(`this is the  curent${currentslide}`)
+    slider(currentslide)
+    
+}
+
+document.addEventListener("keydown", (e)=>{
+  e.key === "ArrowRight" && slideBackward();
+
+  e.key === "ArrowLeft" && slideBackward();
+//    if(e.key==="ArrowRight"){
+//     slideFoward()
+//    }
+})
+
 // for buttons
 let nextButton=document.querySelector(".next");
 let backButton=document.querySelector(".back");
@@ -68,28 +108,14 @@ function correct(element,massage){
     }
 }
 
-// when you click on the plan options
-plans.forEach((items,index)=>{
-    items.addEventListener("click", ()=>{
-     indexNum.pop()
-     indexNum.push(index)
-    //  if(indexNum.length <= 1){
-
-    //     // items.classList.contains("clicked") ? items.classList.remove("clicked") : items.classList.add("clicked");
-    
-      
-
-    })
-})
-
-console.log(plans)
-
 
 nextButton.addEventListener("click", ()=>{
-    checkPersonal()
-    showProgress()
+    slideFoward()
+    checkPersonal();
+    // showProgress()
 })
 backButton.addEventListener("click",()=>{
-    showProgress()
+    // showProgress()
+    slideBackward(currentslide)
     
 })
