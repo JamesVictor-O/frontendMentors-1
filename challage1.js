@@ -8,6 +8,35 @@ let phoneNumber=document.querySelector(".phoneNumber");
 let plans=document.querySelectorAll(".show")
 let indexNum=[1];
 
+// giving the number section some functionalities
+
+function numFuctionality(){
+    let Numbers=document.querySelectorAll(".numb");
+  
+Numbers.forEach((numb,index)=>{
+    // give the numb elements a data set
+
+    numb.setAttribute("data-set",`${index}`)
+
+    numb.addEventListener("click",(e)=>{
+        let slide=e.target.getAttribute("data-set");
+        slider(slide)
+        showProgress(slide)
+    })
+})
+}
+
+numFuctionality()
+
+// show the progress on the number page
+function showProgress(slide){
+    document.querySelectorAll(".numb").forEach(dot=>{
+        dot.classList.remove("active")
+    })
+    document.querySelector(`.numb[data-set="${slide}"]`).classList.add("active");
+};
+showProgress(0)
+
 
 // for the pages to be able to slide
 let currentslide=0;
@@ -27,16 +56,14 @@ slider(0)
 function slideFoward(){
     currentslide === maxslid-1 ? currentslide=0 : currentslide++;
     slider(currentslide)
-    console.log(currentslide)
+    showProgress(currentslide)
+
 }
 
 function slideBackward(){
     currentslide === 0 ? currentslide=maxslid -1 : currentslide--;
-    console.log(`this is the max${maxslid}`)
-    
-    console.log(`this is the  curent${currentslide}`)
     slider(currentslide)
-    
+    showProgress(currentslide)
 }
 
 document.addEventListener("keydown", (e)=>{
@@ -79,13 +106,6 @@ function correct(element,massage){
     // for name
     let nameValue=Name.value;
     nameValue =="" ? error(Name,"name can not be blank") : nameValue.trim().length < 5 || nameValue.trim().length > 15 ?  error(Name,"min of 5 and max of 15"): correct(Name);
-    // if(nameValue ==""){
-    //    error(Name,"name can not be blank")
-    // }else if(nameValue.trim().length < 5 || nameValue.trim().length > 15 ){
-    //     error(Name,"min of 5 and max of 15")
-    // }else{
-    //     correct(Name)
-    // }
 
     // for email
     let emailValue=email.value;
