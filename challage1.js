@@ -5,9 +5,24 @@ let email=document.querySelector(".email");
 let phoneNumber=document.querySelector(".phoneNumber");
 
 
-let plans=document.querySelectorAll(".show")
-let indexNum=[1];
 
+let plans=document.querySelectorAll(".show")
+
+
+let indexNum=[1];
+ function selectPlan(){
+   let plans=document.querySelectorAll(".show");
+   plans.forEach((plan)=>{
+       plan.classList.remove("active_plan");
+       plan.addEventListener("click",(e)=>{
+        let clicked_plan=e.target;
+        clicked_plan.classList.add("active_plan")
+        console.log(clicked_plan)
+       })
+   })
+ }
+
+ selectPlan()
 // giving the number section some functionalities
 
 function numFuctionality(){

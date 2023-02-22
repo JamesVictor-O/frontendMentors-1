@@ -1,6 +1,6 @@
 body{
     height: 90vh;
-    width: 100%;
+    width: 90%;
     background-color: rgba(227, 197, 197, 0.42);
     position: relative;
     display: flex;
@@ -60,6 +60,9 @@ body{
 .active{
     background-color: gray;
 }
+.active_plan{
+    background-color: aqua;
+}
  
 /* detailed section */
 .page{
@@ -71,11 +74,19 @@ body{
     background: rgb(201, 195, 195);
 }
 .detalis{
-    width: 60%;
-    margin-left: 60px;
+   padding-left: 30px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.detail_sec2{
+    width: 80%;
+    padding-left: 30px;
     position: relative;
     margin-top: 20px;
+    margin-left: 30px;
     overflow: hidden;
+    height: 330px;
 }
 .info h2 span{
     font-weight: 50;
@@ -98,10 +109,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 85%;
-    margin-left: 40px;
+    width: 40%;
+    margin-left: 80px;
     margin-top: 30px;
-    top: 80%;
+    top: 70%;
 }
 .btn button{
     width: 60px;
@@ -148,7 +159,6 @@ body{
 /* summary */
 .summary{
     height: 200px;
-    background-color: red;
     position: relative;
 }
 .summary-menu{
@@ -187,18 +197,25 @@ body{
 .sub{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px;
-    width: 60%;
-    margin-left: 40px;
+    width: 70%;
+    margin-bottom: 40px;
 }
-.Inputs{
-    background: black;
+.radio_btn{
     border-radius: 20px;
+    width: 100%;
     margin-left: 20px;
     margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(213, 200, 200);
+    height: 40px;
+    margin-bottom: 40px;
 }
-.Inputs input{
+.week input{
     background-color: black;
 }
 .plans_options h2 span{
@@ -210,20 +227,20 @@ body{
 .subs{
     border: 1px solid rgb(48, 51, 249);
     margin-bottom: 10px;
+    width: 94%;
 }
 .online{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 45px;
-    padding: 20px;
+    padding: 17px;
     padding-top: 0;
 }  
 .online-dis{
     display: flex;
     flex-direction: row;
     width: 60%;
-    
 }
 .online-dis p{
     margin-left: 30px;
@@ -256,3 +273,58 @@ body{
 .ground h3{
     background-color: gray;
 }
+ /* for mobile */
+ @media (max-width: 590px){
+    body{
+        background: black;
+    }
+      .All{
+        background-color: rgb(68, 15, 15);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: 700px;
+        position: absolute;
+      }
+      .steps{
+        width: 91%;
+        height: 100px;
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 0;
+      }
+      .step-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 30px;
+        align-items: center;
+        margin-top: 0;
+      }
+      .step-container .Info{
+        display: none;
+      }
+      .step div{
+        margin-left: 20px;
+      }
+      .detail_sec2{
+        background-color: white;
+        width: 60%;
+        height: 350px;
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        border-radius: 10px;
+      }
+      .Buttons{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 98%;
+        margin-top: 50px;
+        top: 80%;
+        right: 1%;
+        background-color: yellow;
+    }
+ }

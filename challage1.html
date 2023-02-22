@@ -39,7 +39,7 @@
                     <div>
                         <span class="numb">3</span>
                     </div>
-                    <div class="step1 Info">
+                    <div class="step2 Info">
                         <h4>STEP 3 <br><span>ADD-ONS</span></h4>
                     </div>
                 </div>
@@ -59,156 +59,160 @@
         <!-- section for informations -->
 
         <section class="detalis">
-            <!-- personal inf -->
-           <div class="pages">
-            <div class="personal page">
-                <div class="info">
-                    <h2>Personal Info <br><span>please provide your name, email address and Phone number</span></h2>
-                </div>
-                <!-- for name -->
-                <div class="inp">
-                    <label>Name</label><br>
-                    <input type="text" placeholder="e.g James Victor" class="name">
-                    <p class="error-msg"></p>
-                </div>
-                <!-- for Email -->
-                <div class="inp">
-                    <label>Email</label><br>
-                    <input type="email" placeholder="e.g. victorjames408@gmail.com" class="email error" >
-                    <p class="error-msg"></p>
-                </div>
-                <!-- for Phone number -->
-                <div class="inp">
-                    <label>Phone number</label><br>
-                    <input type="text" placeholder="e.g. +1234567" class="phoneNumber">
-                    <p class="error-msg"></p>
-                </div>
-            </div>
-            <!-- plans -->
-            <div class="plans page">
-                <div class="info">
-                    <h2>Select your plan <br><span>You have the options of monthly or yearly billing</span></h2>
-                </div>
-
-                <!-- plans options -->
-                <div class="plans_options">
-
-                    <div class="first show">
-                        <div class="img1">
-                            <img src="challagePic/arcade.svg">
-                        </div>
-                        <div class="first-d">
-                            <h2>Arcade <br><span>$9/mo</span></h2>
-                        </div>
+           <div class="detail_sec2">
+                <!-- personal inf -->
+                <div class="personal page">
+                    <div class="info">
+                        <h2>Personal Info <br><span>please provide your name, email address and Phone number</span></h2>
                     </div>
-
-                    <div class="second show">
-                        <div class="img2">
-                            <img src="challagePic/advanced.svg">
-                        </div>
-                        <div class="second-d">
-                            <h2>Advanced <br><span>$12/mo</span></h2>
-                        </div>
+                    <!-- for name -->
+                    <div class="inp">
+                        <label>Name</label><br>
+                        <input type="text" placeholder="e.g James Victor" class="name">
+                        <p class="error-msg"></p>
                     </div>
-
-                    <div class="third show">
-                        <div class="img3">
-                            <img src="challagePic/pro.svg">
-                        </div>
-                        <div class="third-d">
-                            <h2>Pro <br><span>$15/mo</span></h2>
-                        </div>
+                    <!-- for Email -->
+                    <div class="inp">
+                        <label>Email</label><br>
+                        <input type="email" placeholder="e.g. victorjames408@gmail.com" class="email error" >
+                        <p class="error-msg"></p>
+                    </div>
+                    <!-- for Phone number -->
+                    <div class="inp">
+                        <label>Phone number</label><br>
+                        <input type="text" placeholder="e.g. +1234567" class="phoneNumber">
+                        <p class="error-msg"></p>
                     </div>
                 </div>
-                <div class="sub">
-                    <label for="">weekly</label>
-                    <div class="Inputs">
-                        <input type="radio">
-                        <input type="radio">
+                <!-- plans -->
+                <div class="plans page">
+                    <div class="info">
+                        <h2>Select your plan <br><span>You have the options of monthly or yearly billing</span></h2>
                     </div>
-                    <label for="he">monthly</label>
-                </div>
-            </div>
 
-            <!-- ads section -->
-            <div class="Ads page">
-                <div class="info">
-                    <h2>Pick add-ons <br><span>Add-ons help enhance your gaming experience</span></h2>
-                </div>
-                <div class="subs">
-                    <!-- online -->
-                    <div class="online">
-                        <div class="online-dis">
-                            <input type="checkbox">
-                            <p> Online services <br><span>Access to multiplayers games</span></p>
+                    <!-- plans options -->
+                    <div class="plans_options">
+
+                        <div class="first show active_plan">
+                            <div class="img1">
+                                <img src="challagePic/arcade.svg">
+                            </div>
+                            <div class="first-d">
+                                <h2>Arcade <br><span>$9/mo</span></h2>
+                            </div>
                         </div>
-                        <p class="onth">+$1/mo</p>
+
+                        <div class="second show active_plan">
+                            <div class="img2">
+                                <img src="challagePic/advanced.svg">
+                            </div>
+                            <div class="second-d">
+                                <h2>Advanced <br><span>$12/mo</span></h2>
+                            </div>
+                        </div>
+
+                        <div class="third show active_plan">
+                            <div class="img3">
+                                <img src="challagePic/pro.svg">
+                            </div>
+                            <div class="third-d">
+                                <h2>Pro <br><span>$15/mo</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub">
+                        <div class="radio_btn">
+                            <div class="week">
+                                <label for="weekly">monthly</label>
+                                <input type="radio">
+                            </div>
+                           <div class="month">
+                                <input type="radio">
+                                <label for="weekly">weekly</label>
+                           </div>
+                        </div>
                     </div>
                 </div>
 
-                 <!-- larger -->
-                <div class="subs">
-                   
-                    <div class="online">
-                        <div class="online-dis">
-                            <input type="checkbox">
-                            <p> Larger storage<br><span>Extra 1TB of cloud save</span></p>
-                        </div>
-                        <p class="onth">+$2/mo</p>
+                <!-- ads section -->
+                <div class="Ads page">
+                    <div class="info">
+                        <h2>Pick add-ons <br><span>Add-ons help enhance your gaming experience</span></h2>
                     </div>
+                    <div class="subs">
+                        <!-- online -->
+                        <div class="online">
+                            <div class="online-dis">
+                                <input type="checkbox">
+                                <p> Online services <br><span>Access to multiplayers games</span></p>
+                            </div>
+                            <p class="onth">+$1/mo</p>
+                        </div>
+                    </div>
+
+                    <!-- larger -->
+                    <div class="subs">
+                    
+                        <div class="online">
+                            <div class="online-dis">
+                                <input type="checkbox">
+                                <p> Larger storage<br><span>Extra 1TB of cloud save</span></p>
+                            </div>
+                            <p class="onth">+$2/mo</p>
+                        </div>
+                    </div>
+
+                    <!-- custom -->
+                    <div class="subs">
+                    
+                        <div class="online">
+                            <div class="online-dis">
+                                <input type="checkbox">
+                                <p> Customizable profile<br><span>Custom theme on your profile</span></p>
+                            </div>
+                            <p class="onth">+$2/mo</p>
+                        </div>
+                    </div>
+                    
                 </div>
 
-                <!-- custom -->
-                <div class="subs">
-                   
-                    <div class="online">
-                        <div class="online-dis">
-                            <input type="checkbox">
-                            <p> Customizable profile<br><span>Custom theme on your profile</span></p>
+                <!-- summary -->
+                <div class="summary page">
+                    <div class="info">
+                        <h2>Finishing up<br><span>Double check everything looks OK before confirming</span></h2>
+                    </div>
+                    <div class="summary-menu">
+                        <div class="subscrib">
+                            <p>Arcade (monthly) <br><span><a href="#">Change</a></span></p>
+                            <p>$9/mo</p>
                         </div>
-                        <p class="onth">+$2/mo</p>
+                        <!-- <div class="services">
+                            <div class="services1">
+                                <h5>online services</h5>
+                                <p>+$1/mo</p>
+                            </div>
+                            <div class="services2">
+                                <h5>Larger storage</h5>
+                                <p>+$1/mo</p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h5>Total (per month)</h5>
+                            <p>+$12/mo</p>
+                        </div> -->
                     </div>
                 </div>
-                
-            </div>
-
-            <!-- summary -->
-            <div class="summary page">
-                <div class="info">
-                    <h2>Finishing up<br><span>Double check everything looks OK before confirming</span></h2>
-                </div>
-                <div class="summary-menu">
-                    <div class="subscrib">
-                        <p>Arcade (monthly) <br><span><a href="#">Change</a></span></p>
-                        <p>$9/mo</p>
-                    </div>
-                    <!-- <div class="services">
-                        <div class="services1">
-                            <h5>online services</h5>
-                            <p>+$1/mo</p>
-                        </div>
-                        <div class="services2">
-                            <h5>Larger storage</h5>
-                            <p>+$1/mo</p>
-                        </div>
-                    </div>
-                    <div class="total">
-                        <h5>Total (per month)</h5>
-                        <p>+$12/mo</p>
-                    </div> -->
-                </div>
-            </div>
            </div>
-       
-            <!-- button section -->
-            <div class="Buttons">
-               <div class="back btn">
-                  <button>back</button>
-               </div>
-               <div class="next btn">
-                <button>next</button>
-             </div>
-            </div>
+           <!-- button section -->
+                <div class="Buttons">
+                    <div class="back btn">
+                    <button>back</button>
+                    </div>
+                    <div class="next btn">
+                    <button>next</button>
+                    </div>
+                </div>
+
         </section>
     </div>
     <script src="challage1.js"></script>
