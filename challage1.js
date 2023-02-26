@@ -10,21 +10,53 @@ let plans=document.querySelectorAll(".show")
 
 
 let indexNum=[1];
+// for selecting plans
  function selectPlan(){
    let plans=document.querySelectorAll(".show");
    plans.forEach((plan)=>{
-       plan.classList.remove("active_plan");
-       plan.addEventListener("click",(e)=>{
-        let clicked_plan=e.target;
-        clicked_plan.classList.add("active_plan")
-        console.log(clicked_plan)
-       })
+      plan.addEventListener("click",()=>{
+        const current=document.querySelector(".clicked");
+        if(current){
+            current.classList.remove("clicked");
+        }
+       plan.classList.add("clicked")
+       let presnt=document.querySelector(".clicked");
+      })
+
    })
  }
+selectPlan()
 
- selectPlan()
+
+ 
+// for check boxes 
+ 
+let boxes=document.querySelectorAll('input[name="my-checkbox"]')
+function checkBox(){
+    
+    boxes.forEach(box=>{
+        box.addEventListener("click",(e)=>{
+           boxes.forEach(newBox=>{
+            let removeClass = newBox.parentElement.parentElement;
+            console.log(removeClass)
+            removeClass.classList.remove("clicked")
+           })
+        let addClass=e.target.parentElement.parentElement;
+        addClass.classList.add("clicked")
+        })
+        box.addEventListener("change",()=>{
+            boxes.forEach(otherBox=>{
+                if(otherBox !== box){
+                    otherBox.checked=false;
+                }
+            })
+        })
+    })
+}
+
+checkBox()
+
 // giving the number section some functionalities
-
 function numFuctionality(){
     let Numbers=document.querySelectorAll(".numb");
   
@@ -151,6 +183,5 @@ nextButton.addEventListener("click", ()=>{
 })
 backButton.addEventListener("click",()=>{
     // showProgress()
-    slideBackward(currentslide)
-    
+    slideBackward(currentslide);   
 })

@@ -93,7 +93,7 @@
                     <!-- plans options -->
                     <div class="plans_options">
 
-                        <div class="first show active_plan">
+                        <div class="first show">
                             <div class="img1">
                                 <img src="challagePic/arcade.svg">
                             </div>
@@ -102,7 +102,7 @@
                             </div>
                         </div>
 
-                        <div class="second show active_plan">
+                        <div class="second show">
                             <div class="img2">
                                 <img src="challagePic/advanced.svg">
                             </div>
@@ -111,7 +111,7 @@
                             </div>
                         </div>
 
-                        <div class="third show active_plan">
+                        <div class="third show">
                             <div class="img3">
                                 <img src="challagePic/pro.svg">
                             </div>
@@ -122,14 +122,17 @@
                     </div>
                     <div class="sub">
                         <div class="radio_btn">
-                            <div class="week">
-                                <label for="weekly">monthly</label>
-                                <input type="radio">
-                            </div>
-                           <div class="month">
-                                <input type="radio">
-                                <label for="weekly">weekly</label>
-                           </div>
+                            <label>
+                                monthly
+                                <span class="radio-custom"></span>
+                                <input type="radio" name="radio-btn">
+                                
+                            </label>
+                            <label>
+                                <input type="radio" name="radio-btn">
+                                <span class="radio-custom"></span>
+                                weekly
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -143,7 +146,7 @@
                         <!-- online -->
                         <div class="online">
                             <div class="online-dis">
-                                <input type="checkbox">
+                                <input type="checkbox" name="my-checkbox" class="checkbox">
                                 <p> Online services <br><span>Access to multiplayers games</span></p>
                             </div>
                             <p class="onth">+$1/mo</p>
@@ -152,10 +155,9 @@
 
                     <!-- larger -->
                     <div class="subs">
-                    
                         <div class="online">
                             <div class="online-dis">
-                                <input type="checkbox">
+                                <input type="checkbox" name="my-checkbox" class="checkbox">
                                 <p> Larger storage<br><span>Extra 1TB of cloud save</span></p>
                             </div>
                             <p class="onth">+$2/mo</p>
@@ -164,10 +166,9 @@
 
                     <!-- custom -->
                     <div class="subs">
-                    
                         <div class="online">
                             <div class="online-dis">
-                                <input type="checkbox">
+                                <input type="checkbox" name="my-checkbox" class="checkbox">
                                 <p> Customizable profile<br><span>Custom theme on your profile</span></p>
                             </div>
                             <p class="onth">+$2/mo</p>
@@ -181,25 +182,22 @@
                     <div class="info">
                         <h2>Finishing up<br><span>Double check everything looks OK before confirming</span></h2>
                     </div>
-                    <div class="summary-menu">
-                        <div class="subscrib">
-                            <p>Arcade (monthly) <br><span><a href="#">Change</a></span></p>
-                            <p>$9/mo</p>
-                        </div>
-                        <!-- <div class="services">
-                            <div class="services1">
-                                <h5>online services</h5>
-                                <p>+$1/mo</p>
+                    <div class="overoll">
+                        <div class="summary-menu" >
+                            <div class="subscrib">
+                                <p>Arcade (monthly) <br><span><a href="#">Change</a></span></p>
+                                <p>$9/mo</p>
                             </div>
-                            <div class="services2">
-                                <h5>Larger storage</h5>
-                                <p>+$1/mo</p>
+                            <div>
+                                <div class="add-sum">
+                                    <p>online sevices <span>+$1/mon</span></p>
+                                    <p>Large storage <span>+$2/mon</span></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="total">
-                            <h5>Total (per month)</h5>
-                            <p>+$12/mo</p>
-                        </div> -->
+                       <div class="total">
+                        <p>online sevices<span>+$1/mon</span></p>
+                       </div>
                     </div>
                 </div>
            </div>
