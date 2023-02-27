@@ -4,9 +4,22 @@ let Name=document.querySelector(".name");
 let email=document.querySelector(".email");
 let phoneNumber=document.querySelector(".phoneNumber");
 
+let plan_selected;
+
+let sucessClases=[]
 
 
-let plans=document.querySelectorAll(".show")
+let plans=document.querySelectorAll(".show");
+let all_Input=document.querySelector(".personal");
+console.log(all_Input)
+// function moveTotheNext(){
+//     let sucess=all_Input.querySelectorAll(".success");
+//      if(sucess.length==3){
+//         slideFoward()
+//      }
+
+       
+// }
 
 
 let indexNum=[1];
@@ -21,10 +34,21 @@ let indexNum=[1];
         }
        plan.classList.add("clicked")
        let presnt=document.querySelector(".clicked");
-      })
 
+    //    to keep updating the summary
+    plan_selected=presnt.querySelector(".show h2").childNodes[0].textContent;
+    planAmount=presnt.querySelector(".show h2 span").textContent;
+
+      let sum_1=document.querySelector(".subscrib p").childNodes[0]
+       sum_1.textContent=plan_selected;
+
+       let sum_2=document.querySelectorAll(".subscrib p")[1];
+       sum_2.textContent=planAmount;
+      })
+     
    })
  }
+ 
 selectPlan()
 
 
@@ -38,11 +62,25 @@ function checkBox(){
         box.addEventListener("click",(e)=>{
            boxes.forEach(newBox=>{
             let removeClass = newBox.parentElement.parentElement;
-            console.log(removeClass)
             removeClass.classList.remove("clicked")
            })
         let addClass=e.target.parentElement.parentElement;
+        let sumMenu=document.querySelector(".summary-menu");
         addClass.classList.add("clicked")
+    let onLine=document.querySelector(".Ads");
+    let onLine2=onLine.querySelector(".clicked");
+    let inText=onLine2.querySelector(".online-dis p").childNodes[0].textContent
+    // //    summary
+    // let sum1=document.querySelectorAll(".add-sum p")[0].childNodes[0]
+    // sum1.textContent=inText
+
+    let newElem=` <div>
+    <div class="add-sum">
+        <p>${inText} <span>+$1/mon</span></p>
+    </div>
+</div>`
+sumMenu.appendChild(newElem)
+
         })
         box.addEventListener("change",()=>{
             boxes.forEach(otherBox=>{
@@ -53,6 +91,7 @@ function checkBox(){
         })
     })
 }
+
 
 checkBox()
 
@@ -179,6 +218,7 @@ function correct(element,massage){
 nextButton.addEventListener("click", ()=>{
     slideFoward()
     checkPersonal();
+    // moveTotheNext()
     // showProgress()
 })
 backButton.addEventListener("click",()=>{
