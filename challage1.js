@@ -5,20 +5,20 @@ let email=document.querySelector(".email");
 let phoneNumber=document.querySelector(".phoneNumber");
 
 let plan_selected;
-
 let sucessClases=[]
-
 
 let plans=document.querySelectorAll(".show");
 let all_Input=document.querySelector(".personal");
-console.log(all_Input)
+
+// for buttons
+let nextButton=document.querySelector(".next");
+let backButton=document.querySelector(".back");
+
 // function moveTotheNext(){
 //     let sucess=all_Input.querySelectorAll(".success");
 //      if(sucess.length==3){
 //         slideFoward()
-//      }
-
-       
+//      }      
 // }
 
 
@@ -40,7 +40,7 @@ let indexNum=[1];
     planAmount=presnt.querySelector(".show h2 span").textContent;
 
       let sum_1=document.querySelector(".subscrib p").childNodes[0]
-       sum_1.textContent=plan_selected;
+       sum_1.textContent=plan_selected + "(monthly)";
 
        let sum_2=document.querySelectorAll(".subscrib p")[1];
        sum_2.textContent=planAmount;
@@ -50,6 +50,7 @@ let indexNum=[1];
  }
  
 selectPlan()
+ 
 
 
  
@@ -65,21 +66,20 @@ function checkBox(){
             removeClass.classList.remove("clicked")
            })
         let addClass=e.target.parentElement.parentElement;
-        let sumMenu=document.querySelector(".summary-menu");
+        let sumMenu=document.querySelector(".add-sum");
         addClass.classList.add("clicked")
     let onLine=document.querySelector(".Ads");
     let onLine2=onLine.querySelector(".clicked");
-    let inText=onLine2.querySelector(".online-dis p").childNodes[0].textContent
+    let inText=onLine2.querySelector(".online-dis p").childNodes[0].textContent;
+    let inamount=onLine2.querySelector(".onth").textContent;
     // //    summary
     // let sum1=document.querySelectorAll(".add-sum p")[0].childNodes[0]
     // sum1.textContent=inText
-
-    let newElem=` <div>
-    <div class="add-sum">
-        <p>${inText} <span>+$1/mon</span></p>
-    </div>
-</div>`
-sumMenu.appendChild(newElem)
+    let newElem=""
+     newElem +=`
+        <p>${inText} <span>${inamount}</span></p>
+    `
+sumMenu.innerHTML=newElem
 
         })
         box.addEventListener("change",()=>{
@@ -111,6 +111,10 @@ Numbers.forEach((numb,index)=>{
     })
 })
 }
+
+
+
+
 
 numFuctionality()
 
@@ -144,13 +148,24 @@ function slideFoward(){
     slider(currentslide)
     showProgress(currentslide)
 
+    if(currentslide>=1){
+        backButton.style.visibility="visible";
+    }else if(currentslide=0){
+        backButton.style.visibility="hidden";
+    }
+    console.log(currentslide)
+
 }
 
 function slideBackward(){
     currentslide === 0 ? currentslide=maxslid -1 : currentslide--;
     slider(currentslide)
     showProgress(currentslide)
+    
 }
+
+
+
 
 document.addEventListener("keydown", (e)=>{
   e.key === "ArrowRight" && slideBackward();
@@ -161,10 +176,11 @@ document.addEventListener("keydown", (e)=>{
 //    }
 })
 
-// for buttons
-let nextButton=document.querySelector(".next");
-let backButton=document.querySelector(".back");
 
+
+// if(currentslide<=0){
+//     
+// }
 // for error massage
 function error(element,massage){
     let Parent=element.parentElement;
@@ -214,6 +230,8 @@ function correct(element,massage){
     }
 }
 
+// for buttons 
+let btnIn=0;
 
 nextButton.addEventListener("click", ()=>{
     slideFoward()
@@ -223,5 +241,6 @@ nextButton.addEventListener("click", ()=>{
 })
 backButton.addEventListener("click",()=>{
     // showProgress()
-    slideBackward(currentslide);   
+    slideBackward(currentslide); 
+
 })

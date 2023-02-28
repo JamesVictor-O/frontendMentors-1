@@ -70,7 +70,7 @@ body{
     width: 100%;
 }
 .clicked{
-    border: 2px solid black;
+    border: none;
     background: rgb(201, 195, 195);
 }
 .detalis{
@@ -125,6 +125,9 @@ body{
 .btn button:hover{
     background: rgb(26, 12, 131);
 }
+.back{
+    visibility: hidden;
+}
 
 .hidden{
    display: none;
@@ -162,7 +165,7 @@ body{
     position: relative;
 }
 .summary-menu{
-    background-color: rgb(250, 217, 246);
+    background-color: rgb(213, 193, 211);
     padding: 10px;
     padding-bottom: 50px;
     height: 110px;
@@ -183,8 +186,7 @@ body{
     margin-left: 330px;
 }
 .total span{
-
-    margin-left: 330px;
+    margin-left: 310px;
 }
 
 
@@ -307,19 +309,20 @@ input[type="radio"]{
       .detail_sec2{
         background-color: white;
         width: 65%;
-        height: 350px;
+        height: 380px;
         position: absolute;
         left: 8%;
         top: 6%;
         border-radius: 10px;
       }
       .personal{
-        background-color: red;
-        width: 100%;
-        height: 40%;
+        width: 90%;
+        height: 30%;
+        font-size: 13px;
         margin-right: 60px;
-        margin: 0;
-        padding: 0;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 20px;
       }
       .Buttons{
         position: absolute;
@@ -330,6 +333,85 @@ input[type="radio"]{
         margin-top: 50px;
         top: 80%;
         right: 1%;
-        background-color: yellow;
+    }
+    .inp input{
+        width: 90%;
+    }
+    .info{
+        padding: 0;
+        margin: 0;
+    }
+    .plans_options{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .show{
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+    }
+    .plans_options .first{
+        margin-left: 20px;
+        font-size: 10px;
+        width: 70%;
+        margin-bottom: 5px;
+    }
+    .plans_options .second{
+        font-size: 8px;
+        width: 70%;
+        margin-bottom: 5px;
+    }
+    .plans_options .third{
+        font-size: 10px;
+        width: 70%;
+        margin-bottom: 5px;
+    }
+    .show h2{
+        padding-left: 10px;
+        padding-top: 0;
+        color: blue;
+    }
+    .subs{
+        width: 80%;
+        font-size: 10px;
+    }
+    .online-dis p{
+        font-size: 13px;
+        background-color: red;
+        width: 200px;
+        margin: 0;
+        padding-left: 20px;
+    }
+    .onth{
+        width: 0;
+    }
+    .online{
+        background: black;
+        display: flex;
+        justify-content: space-between;
+    }
+    .summary{
+        width:80%;
+        font-size: 14px;
+
+    }
+    .Ads{
+        margin: ;
+    }
+    .total span{
+        margin-left: 80px;
+    }
+    .total{
+        display: flex;
+        flex-direction: row;
+    }
+    .add-sum{
+        display: flex;
+        flex-direction: row;
+    }
+    .add-sum span{
+        margin-left: 30px;
     }
  }
