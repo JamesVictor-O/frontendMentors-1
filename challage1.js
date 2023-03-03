@@ -14,6 +14,7 @@ let all_Input=document.querySelector(".personal");
 let nextButton=document.querySelector(".next");
 let backButton=document.querySelector(".back");
 
+
 // function moveTotheNext(){
 //     let sucess=all_Input.querySelectorAll(".success");
 //      if(sucess.length==3){
@@ -72,9 +73,6 @@ function checkBox(){
     let onLine2=onLine.querySelector(".clicked");
     let inText=onLine2.querySelector(".online-dis p").childNodes[0].textContent;
     let inamount=onLine2.querySelector(".onth").textContent;
-    // //    summary
-    // let sum1=document.querySelectorAll(".add-sum p")[0].childNodes[0]
-    // sum1.textContent=inText
     let newElem=""
      newElem +=`
         <p>${inText} <span>${inamount}</span></p>
@@ -144,43 +142,61 @@ slider(0)
 
 
 function slideFoward(){
-    currentslide === maxslid-1 ? currentslide=0 : currentslide++;
+    // currentslide === maxslid-1 ? return : currentslide++;
+    if(currentslide === maxslid-1){
+        return
+    }else{
+        currentslide++
+    }
     slider(currentslide)
     showProgress(currentslide)
-
-    if(currentslide>=1){
-        backButton.style.visibility="visible";
-    }else if(currentslide=0){
-        backButton.style.visibility="hidden";
-    }
-    console.log(currentslide)
-
+  summit()
 }
 
 function slideBackward(){
-    currentslide === 0 ? currentslide=maxslid -1 : currentslide--;
+    if(currentslide === 0){
+        return
+    }else{
+        currentslide--
+    }
     slider(currentslide)
     showProgress(currentslide)
-    
+   summit() 
+}
+function summit(){
+    if(currentslide==3){
+      nextButton.innerHTML=`<button class="submit">submit</button>`
+    }
+    if(currentslide<=2){
+        nextButton.innerHTML=`<button>Next</button>`
+    }
+    if(currentslide>=1){
+        backButton.style.visibility="visible";
+    }else{
+        backButton.style.visibility="hidden";
+    }
 }
 
+function sub(){
+    const labelCheckbox=document.querySelectorAll(".radio_btn label input")
+    console.log(labelCheckbox)
+    labelCheckbox.forEach(lable =>(
+        lable.addEventListener("click",()=>{
+           console.log(lable.parentElement.textContent.trim())
+        })
+    ))
+}
 
-
-
+sub()
 document.addEventListener("keydown", (e)=>{
   e.key === "ArrowRight" && slideBackward();
 
   e.key === "ArrowLeft" && slideBackward();
-//    if(e.key==="ArrowRight"){
-//     slideFoward()
-//    }
 })
 
 
 
-// if(currentslide<=0){
-//     
-// }
+
 // for error massage
 function error(element,massage){
     let Parent=element.parentElement;
@@ -230,17 +246,34 @@ function correct(element,massage){
     }
 }
 
+function finalStage(e){
+    
+}
 // for buttons 
 let btnIn=0;
 
-nextButton.addEventListener("click", ()=>{
+nextButton.addEventListener("click", (e)=>{
     slideFoward()
     checkPersonal();
-    // moveTotheNext()
-    // showProgress()
-})
-backButton.addEventListener("click",()=>{
-    // showProgress()
-    slideBackward(currentslide); 
+ nextButton.querySelector(".submit").addEventListener("click",(e)=>{
+    
+       if(e.target.textContent=="submit"){
+        let sum_1=document.querySelector(".sum-1");
+        let sum_2=document.querySelector(".thanks");
+        sum_1.style.display="none";
+        sum_2.style.display="block";
+       }
+    })
 
+
+})
+backButton.addEventListener("click",(e)=>{
+    // showProgress()
+    slideBackward(currentslide);
+    if(e.target.textContent=="back"){
+        let sum_1=document.querySelector(".sum-1");
+        let sum_2=document.querySelector(".thanks");
+        sum_1.style.display="block";
+        sum_2.style.display="none";
+       }
 })

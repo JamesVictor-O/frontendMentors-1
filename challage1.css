@@ -57,6 +57,28 @@ body{
     font-size: 12px;
     cursor: pointer;
 }
+.sum-1{
+    display: block;
+}
+.thanks{
+    display: none;
+}
+.sum-2{
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.sum-2 p{
+    font-size: 18px;
+    padding: 10px;
+    width: 500px;
+}
+.sum-2 img{
+    width: 50px;
+}
 .active{
     background-color: gray;
 }
@@ -209,7 +231,6 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgb(213, 200, 200);
-    height: 40px;
     margin-bottom: 40px;
 }
 input[type="radio"]{
@@ -277,7 +298,7 @@ input[type="radio"]{
         background: black;
     }
       .All{
-        background-color: rgb(68, 15, 15);
+        background-color: rgb(192, 178, 178);
         display: flex;
         width: 80%;
         flex-direction: column;
@@ -286,10 +307,11 @@ input[type="radio"]{
         position: fixed;
       }
       .steps{
+        background-image: url(challagePic/bg-mobile.svg);
         width: 91%;
         height: 100px;
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         border-radius: 0;
       }
       .step-container{
@@ -308,44 +330,70 @@ input[type="radio"]{
       }
       .detail_sec2{
         background-color: white;
-        width: 65%;
-        height: 380px;
+        width: 69%;
+        height: 390px;
         position: absolute;
         left: 8%;
         top: 6%;
         border-radius: 10px;
-      }
-      .personal{
-        width: 90%;
-        height: 30%;
-        font-size: 13px;
-        margin-right: 60px;
-        margin-left: 0;
-        padding-left: 0;
-        padding-right: 20px;
       }
       .Buttons{
         position: absolute;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 98%;
+        width: 50%;
         margin-top: 50px;
-        top: 80%;
-        right: 1%;
+        top: 81%;
+        background-color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 7px;
+        padding-bottom: 4px;
+        border-radius: 10px;
     }
+    .personal{
+        width: 85%;
+        position: absolute;
+        padding-left: 20px;
+        left: 1px;
+    }  
+    .plans{
+        width: 85%;
+        position: absolute;
+        padding-left: 10px;
+        left: 15px;
+    }
+    .Ads{
+        width: 80%;
+        padding-left: 30px;
+        position: absolute;
+        left: 11px;
+    }
+    .summary{
+        width: 85%;
+        padding-left: 10px;
+        position: absolute;
+        left: 25px;
+    }
+
     .inp input{
         width: 90%;
+        font-size: 10px;
     }
     .info{
-        padding: 0;
-        margin: 0;
+        padding-left: 20px;
+    }
+    .info h2{
+       font-size: 18px;
+    }
+    .info span{
+        font-size: 10ps;
     }
     .plans_options{
         display: flex;
         flex-direction: column;
-        width: 100%;
-
+        width: 100%
     }
     .show{
         display: flex;
@@ -355,63 +403,71 @@ input[type="radio"]{
     .plans_options .first{
         margin-left: 20px;
         font-size: 10px;
-        width: 70%;
+        width: 75%;
         margin-bottom: 5px;
     }
     .plans_options .second{
         font-size: 8px;
-        width: 70%;
+        width: 75%;
         margin-bottom: 5px;
     }
     .plans_options .third{
         font-size: 10px;
-        width: 70%;
+        width: 75%;
         margin-bottom: 5px;
     }
     .show h2{
         padding-left: 10px;
-        padding-top: 0;
         color: blue;
+        margin-bottom: 200px;
+    }
+    .sub{
+        font-size: 13px;
+        margin-left: 30px;
+    } 
+    .radio_btn{
+        padding-left: 2px;
     }
     .subs{
-        width: 80%;
         font-size: 10px;
     }
-    .online-dis p{
-        font-size: 13px;
-        background-color: red;
-        width: 200px;
-        margin: 0;
-        padding-left: 20px;
-    }
-    .onth{
-        width: 0;
-    }
     .online{
-        background: black;
-        display: flex;
-        justify-content: space-between;
+        width: 85%;
+        height: 60px;
     }
-    .summary{
-        width:80%;
-        font-size: 14px;
-
-    }
-    .Ads{
-        margin: ;
-    }
-    .total span{
-        margin-left: 80px;
-    }
-    .total{
-        display: flex;
-        flex-direction: row;
-    }
-    .add-sum{
-        display: flex;
-        flex-direction: row;
-    }
-    .add-sum span{
-        margin-left: 30px;
-    }
- }
+    
+   .total span{
+    margin-left: 70px;
+   }
+   .add-sum span{
+    margin-left: 50px;
+   }
+   .thanks{
+    display: none;
+   }
+   .online-dis p{
+    font-size: 14px;
+    font-weight: 800;
+   }
+   .online-dis span{
+    font-size: 2px;
+    font-weight: 300;
+   }
+   .online p{
+    font-size: 13px;
+   }
+   .online-dis{
+    width: 87%;
+   }
+   .sum-2{
+    padding: 0;
+   }
+   .sum-2 p{
+    width: 90%;
+    text-align: center;
+   }
+   .thanks{
+    padding-left: 0;
+    margin-left: 0;
+   }
+} 
