@@ -301,7 +301,7 @@ input[type="radio"]{
         display: block;
         background-color: rgb(192, 178, 178);
         width: 100%;
-        height: 100vh;
+        height: 90vh;
       }
       .steps{
         background-image: url(challagePic/bg-mobile.svg);
@@ -316,7 +316,7 @@ input[type="radio"]{
         flex-direction: row;
         margin-left: 20px;
         align-items: center;
-        margin-top: 25px;
+        margin-top: 0px;
       }
       .step-container .Info{
         display: none;
